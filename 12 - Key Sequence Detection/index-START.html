@@ -7,6 +7,16 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
-    <script></script>
+    <script>
+      const pressed = [];
+      const secretCode = 'unicorn';
+      window.addEventListener('keydown', function (e) {
+        pressed.push(e.key);
+        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+        if (pressed.join('').includes(secretCode)) {
+          cornify_add();
+        }
+      });
+    </script>
   </body>
 </html>
